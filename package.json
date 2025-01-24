@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "glip build && glip styles",
+    "dev:webpack": "webpack --mode development --define-process-env-node-env dev",
+    "build:webpack": "webpack --mode production --define-process-env-node-env production",
+    "dev": "glip",
+    "styles": "glip styles",
     "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "live-server": "^1.2.2"
+  "dependencies": {
+    "express": "^4.21.2",
+    "serve-favicon": "^2.5.0"
   }
 }
